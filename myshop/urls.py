@@ -17,7 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    #Urls that run off the base app 
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
+    #App specific urls
     path('', include('home.urls')),
 ]

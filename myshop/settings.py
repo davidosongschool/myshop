@@ -89,9 +89,10 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1  #Used by social account login to create callback urls
 
+#Needed to send emails for vertification
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email' # Use either username or email
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
